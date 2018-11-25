@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <title>Esha's Restaurant</title>
+  <link href="/normalize.css" type="text/css" ref="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow" type="text/css" rel="stylesheet">
+  <script src="/assets/jquery.js" async></script>
+
+  <style>
+    body {
+      margin: 0 auto;
+      max-width: 600px;
+      font-family: helvetica, sans-serif;
+      background-color: #232323;
+    }
+
+    .meals {
+      position: relative;
+      height: 200px;
+      margin-top: 40px;
+      border-radius: 12px;
+      background-size: cover;
+    }
+
+    .first { background-image: url("http://dash.ga.co/assets/firstcourse.jpg") }
+
+    .second { background-image: url("http://dash.ga.co/assets/secondcourse.jpg") }
+
+    .dessert { background-image: url("http://dash.ga.co/assets/dessertcourse.jpg") }
+
+    .meals-text {
+      position: absolute;
+      bottom: 0;
+      margin: 0px;
+      padding: 10px;
+      height: 30px;
+      line-height: 28px;
+      text-align: justify;
+      color: #FFF;
+      background: #000;
+      background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+      -webkit-transition: height .5s;
+         -moz-transition: height .5s;
+              transition: height .5s;
+    }
+
+    .meals-description { opacity: 0; }
+
+    .meals-price { float: right; }
+
+    .meals-visible .meals-text { height: 150px; }
+
+    .meals-visible .meals-description { opacity: 1; }
+
+    h1 {
+      margin-top: 60px;
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 75px;
+      font-family: "Londrina Shadow", cursive;
+      color: #aaa;
+    }
+
+    h2 {
+      margin-top: 0;
+      margin-bottom: 70px;
+      text-align: center;
+      color: #bbb;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        margin-top: 20px;
+        line-height: 40px;
+        font-size: 50px;
+      }
+
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+
+      .meals { margin: 20px 12px 0 12px; }
+
+      .meals-text {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      .meals-price { font-size: 16px; }
+    }
+  </style>
+  <script async defer>
+    $('div').on('click', function(){
+      $(this).toggleClass('meals-visible');
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Esha's Restaurant</h1>
+    <h2>A New York City Eatery</h2>
+    <nav>
+    </nav>
+  </header>
+  <main>
+    <div class="meals first">
+      <p class="meals-text">
+        Welsh onion soko <span class="meals-price">$14</span><br>
+        <small class="meals-description">
+          Mustard sierra leone bologi kale chard beet greens Black-eyed pea sorrel amaranth garlic tigernut spring onion summer purslane asparagus lentil.
+        </small>
+      </p>
+    </div>
+    <div class="meals second">
+      <p class="meals-text">
+        Pastrami boudin tongue <span class="meals-price">$22</span><br>
+        <small class="meals-description">
+          Tri-tip capicola kielbasa salami brisket chicken rump strip steak drumstick. Meatloaf chuck boudin ribeye pork jowl. Andouille bacon jowl meatloaf pork loin prosciutto bresaola.
+        </small>
+      </p>
+    </div>
+    <div class="meals dessert">
+      <p class="meals-text">
+        Fruitcake marzipan pudding dragee <span class="meals-price">$8</span><br>
+        <small class="meals-description">
+          Lollipop tart cotton candy jelly-o carrot cake apple pie cupcake. Jelly-o bear claw ice cream candy canes.
+        </small>
+      </p>
+    </div>
+  </main>
+</body>
+</html>
